@@ -86,21 +86,33 @@ export default function ProductsSection() {
           ))}
         </div>
 
-        <div className="mt-10 rounded-3xl border border-black/10 bg-white/35 p-6 sm:p-8">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-sm text-black/70">
-              Du suchst etwas Spezielles? Ich fertige auch Einzelstücke nach
-              Maß.
-            </p>
+        <div className="mt-14 border-t border-black/10 pt-10">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-start gap-4">
+              <div className="mt-1 h-10 w-1.5 rounded-full bg-[#325453]" />
+              <div className="max-w-2xl">
+                <p className="text-xs font-medium uppercase tracking-[0.22em] text-black/60">
+                  Individuell nach Maß
+                </p>
+                <p className="mt-2 text-lg font-semibold leading-snug text-black/90 sm:text-xl">
+                  Du suchst etwas Spezielles? <span className="text-[#325453]">Ich fertige Einzelstücke.</span>
+                </p>
+                <p className="mt-2 text-sm leading-6 text-black/65">
+                  Kurz schreiben reicht – ich melde mich mit Rückfragen und einem realistischen Zeitrahmen.
+                </p>
+              </div>
+            </div>
+
             <Link
               href="/kontakt"
-              className="inline-flex items-center justify-center rounded-full bg-[#325453] px-5 py-3 text-sm font-medium text-[#F2EBD9] hover:brightness-110"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#325453] px-7 py-3.5 text-sm font-medium text-[#F2EBD9] hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#325453]/40 sm:w-auto"
             >
-              Projekt anfragen
+              Projekt anfragen <span aria-hidden>→</span>
             </Link>
           </div>
         </div>
-      </div>
+        </div>
+      
     </section>
   );
 }
