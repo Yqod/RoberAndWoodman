@@ -1,24 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f2ebd9;
+  --foreground: #1f2a2a;
+
+  --brand-sand: #f2ebd9;
+  --brand-teal: #325453;
+
+  --muted: #5f6b6a;
+  --line: #e7dfc9;
+}
+
+@layer utilities {
+  .clip-hero {
+    clip-path: polygon(100% 0, 100% 100%, 84% 95%, 69% 97%, 55% 92%, 41% 96%, 27% 90%, 12% 94%, 0 87%, 0 0);
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-brand-sand: var(--brand-sand);
+  --color-brand-teal: var(--brand-teal);
+
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* optional: Dark-Mode kannst du später sauber designen; erstmal neutral lassen */
 body {
   background: var(--background);
   color: var(--foreground);

@@ -1,7 +1,12 @@
 import Image from "next/image";
+import Hero from "./components/HeroSection";
+import ProductsSection from "./components/products";
 
 export default function Home() {
   return (
+    <>
+    <Hero />
+    <ProductsSection />
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Image
@@ -10,8 +15,7 @@ export default function Home() {
           alt="Next.js logo"
           width={100}
           height={20}
-          priority
-        />
+          priority />
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             To get started, edit the page.tsx file.
@@ -46,8 +50,7 @@ export default function Home() {
               src="/vercel.svg"
               alt="Vercel logomark"
               width={16}
-              height={16}
-            />
+              height={16} />
             Deploy Now
           </a>
           <a
@@ -60,6 +63,6 @@ export default function Home() {
           </a>
         </div>
       </main>
-    </div>
+    </div></>
   );
 }
