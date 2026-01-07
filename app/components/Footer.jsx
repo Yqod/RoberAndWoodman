@@ -17,48 +17,48 @@ export default function Footer() {
 
   return (
     <footer className="relative border-t border-black/10 bg-[#F2EBD9]">
-      {/* subtle decoration like the rest of the site */}
+      {/* subtle decoration (lighter) */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_0%,rgba(50,84,83,0.18),transparent_55%),radial-gradient(circle_at_85%_10%,rgba(0,0,0,0.06),transparent_60%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_0%,rgba(50,84,83,0.10),transparent_55%),radial-gradient(circle_at_85%_10%,rgba(0,0,0,0.04),transparent_60%)]"
       />
 
-      <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
-        <div className="grid gap-8 md:grid-cols-12 md:items-start">
-          {/* Brand / CTA */}
+      <div className="relative mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12">
+        <div className="grid gap-7 md:grid-cols-12 md:items-start">
+          {/* Brand / CTA (smaller, calmer) */}
           <div className="md:col-span-5">
-            <div className="rounded-3xl border border-black/10 bg-white/35 p-6 backdrop-blur">
-              <div className="flex items-start gap-4">
-                <div className="mt-1 h-10 w-1.5 rounded-full bg-[#325453]" />
+            <div className="rounded-3xl border border-black/10 bg-white/25 p-5">
+              <div className="flex items-start gap-3">
+                <div className="mt-1 h-9 w-1.5 rounded-full bg-[#325453]" />
                 <div className="min-w-0">
-                  <p className="text-xs font-medium uppercase tracking-[0.22em] text-black/60">
+                  <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-black/55">
                     Robert &amp; Woodman
                   </p>
-                  <p className="mt-2 text-2xl font-semibold tracking-tight text-black/90">
+                  <p className="mt-2 text-xl font-semibold tracking-tight text-black/85">
                     Handarbeit aus Holz.
                   </p>
-                  <p className="mt-3 text-sm leading-6 text-black/65">
+                  <p className="mt-2.5 text-sm leading-6 text-black/60">
                     Windspiele, Schneidebretter und Einzelstücke – sauber
-                    verarbeitet, langlebig gedacht und mit ruhiger Ästhetik.
+                    verarbeitet, langlebig gedacht.
                   </p>
 
-                  <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <div className="mt-4 flex flex-col gap-2.5 sm:flex-row sm:items-center">
                     <Link
                       href="/kontakt"
-                      className="inline-flex w-full items-center justify-center rounded-full bg-[#325453] px-6 py-3 text-sm font-medium text-[#F2EBD9] hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#325453]/40 sm:w-auto"
+                      className="inline-flex w-full items-center justify-center rounded-full bg-[#325453] px-5 py-2.5 text-sm font-medium text-[#F2EBD9] hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#325453]/35 sm:w-auto"
                     >
-                      Projekt anfragen <span aria-hidden>→</span>
+                      Anfragen <span aria-hidden>→</span>
                     </Link>
 
                     <Link
                       href="/#produkte"
-                      className="inline-flex w-full items-center justify-center rounded-full border border-black/15 bg-white/35 px-6 py-3 text-sm font-medium text-black/75 hover:bg-white/55 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#325453]/30 sm:w-auto"
+                      className="inline-flex w-full items-center justify-center rounded-full border border-black/10 bg-white/25 px-5 py-2.5 text-sm font-medium text-black/70 hover:bg-white/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#325453]/25 sm:w-auto"
                     >
-                      Produkte ansehen
+                      Produkte
                     </Link>
                   </div>
 
-                  <p className="mt-4 text-xs leading-5 text-black/55">
+                  <p className="mt-3 text-[12px] leading-5 text-black/50">
                     Antwort meist innerhalb von 24–48 Stunden.
                   </p>
                 </div>
@@ -68,15 +68,15 @@ export default function Footer() {
 
           {/* Navigation */}
           <div className="md:col-span-3">
-            <p className="text-xs font-medium uppercase tracking-[0.22em] text-black/60">
+            <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-black/55">
               Navigation
             </p>
-            <ul className="mt-4 grid gap-2">
+            <ul className="mt-3 grid gap-2">
               {navLinks.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm text-black/70 hover:text-black transition-colors"
+                    className="text-sm text-black/65 hover:text-black transition-colors"
                   >
                     {l.label}
                   </Link>
@@ -87,12 +87,12 @@ export default function Footer() {
 
           {/* Kontakt */}
           <div className="md:col-span-4">
-            <p className="text-xs font-medium uppercase tracking-[0.22em] text-black/60">
+            <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-black/55">
               Kontakt
             </p>
 
-            <div className="mt-4 rounded-3xl border border-black/10 bg-white/25 p-5">
-              <div className="grid gap-3 text-sm text-black/75">
+            <div className="mt-3 rounded-3xl border border-black/10 bg-white/20 p-5">
+              <div className="grid gap-2.5 text-sm text-black/70">
                 <a
                   className="hover:text-black transition-colors"
                   href="mailto:info@robertwoodman.de"
@@ -105,10 +105,12 @@ export default function Footer() {
                 >
                   +49 123 456 789
                 </a>
-                <div className="text-xs text-black/55">Mo–Fr · 09:00–17:00</div>
+                <div className="text-[12px] text-black/50">
+                  Mo–Fr · 09:00–17:00
+                </div>
               </div>
 
-              <div className="mt-5 flex items-center gap-2">
+              <div className="mt-4 flex items-center gap-2">
                 <SocialIcon href="#" label="Instagram">
                   <InstagramIcon />
                 </SocialIcon>
@@ -120,19 +122,19 @@ export default function Footer() {
                 </SocialIcon>
               </div>
 
-              <div className="mt-5 border-t border-black/10 pt-4">
-                <p className="text-xs text-black/55">
+              <div className="mt-4 border-t border-black/10 pt-4">
+                <p className="text-[12px] text-black/50">
                   Rechtliches:{" "}
                   {legalLinks.map((l, idx) => (
                     <span key={l.href}>
                       <Link
                         href={l.href}
-                        className="text-black/70 hover:text-black transition-colors"
+                        className="text-black/65 hover:text-black transition-colors"
                       >
                         {l.label}
                       </Link>
                       {idx < legalLinks.length - 1 ? (
-                        <span className="px-2 text-black/35">•</span>
+                        <span className="px-2 text-black/30">•</span>
                       ) : null}
                     </span>
                   ))}
@@ -142,21 +144,24 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-10 flex flex-col gap-3 border-t border-black/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-black/55">
+        {/* Bottom (tighter) */}
+        <div className="mt-8 flex flex-col gap-3 border-t border-black/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-[12px] text-black/50">
             © {year} Robert &amp; Woodman. Alle Rechte vorbehalten.
           </p>
 
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-black/55">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[12px] text-black/50">
             <Link href="/#ueber" className="hover:text-black transition-colors">
               Über mich
             </Link>
-            <span className="text-black/30">•</span>
-            <Link href="/#produkte" className="hover:text-black transition-colors">
+            <span className="text-black/25">•</span>
+            <Link
+              href="/#produkte"
+              className="hover:text-black transition-colors"
+            >
               Produkte
             </Link>
-            <span className="text-black/30">•</span>
+            <span className="text-black/25">•</span>
             <a href="#" className="hover:text-black transition-colors">
               Nach oben
             </a>
@@ -173,7 +178,7 @@ function SocialIcon({ href, label, children }) {
       href={href}
       aria-label={label}
       title={label}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white/35 text-black/70 hover:bg-white/55 hover:text-black transition-colors"
+      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/25 text-black/65 hover:bg-white/40 hover:text-black transition-colors"
     >
       <span className="sr-only">{label}</span>
       <span className="h-5 w-5">{children}</span>
