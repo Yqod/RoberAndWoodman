@@ -148,6 +148,15 @@ export default function Footer() {
         <div className="mt-8 flex flex-col gap-3 border-t border-black/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[12px] text-black/50">
             © {year} Robert &amp; Woodman. Alle Rechte vorbehalten.
+            <span className="px-2 text-black/25">•</span>
+            <a
+              href="https://22orbit.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black/65 hover:text-black transition-colors"
+            >
+              Webdesign: 22orbit
+            </a>
           </p>
 
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[12px] text-black/50">
